@@ -1,0 +1,19 @@
+.headerview {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  margin-top: 1.875rem;
+  padding: 0 10.125rem;
+}
+
+.logo {
+  width: 12.5rem;
+  height: 12.5rem;
+}
+
+.connectBtn:hover {
+  background-color: #1677ff !important;
+  color: #ffffff !important;
+}
