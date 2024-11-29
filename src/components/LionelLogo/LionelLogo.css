@@ -1,0 +1,12 @@
+.logo-div {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    max-width: 135px;
+    max-height: 48px;
+    /* border: 1px solid red; */
+    font-family: var(--manrope-font);
+    font-size: 32px;
+    font-weight:400;
+}
