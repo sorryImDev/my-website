@@ -1,0 +1,58 @@
+.avatar-group {
+    display: flex;
+    gap: 24px;
+    font-family: var(--manrope-font);
+    color: var(--app-grey-400);
+    flex-wrap: wrap;
+}
+
+.left-column{
+    display: flex;
+    flex-direction: row;
+}
+
+.right-column {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.big-name {
+    font-size: 32px;
+    line-height: 140%;
+}
+
+.job-title {
+    font-size: 18px;
+    line-height: 150%;
+    margin-top: 4px;
+}
+
+.link-group {
+    display: flex;
+    gap: 16px;
+    flex-direction: row;
+    margin-top: 16px;
+    color: var(--app-blue);
+}
+
+.link-item {
+    font-size: 20px;
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 1566px) {
+    .avatar-group {
+      flex-wrap: nowrap; /* Prevent wrapping and keep everything in one row */
+    }
+  
+    .left-column {
+      /* If needed, adjust size or margins for left column */
+      width: auto;
+    }
+  
+    .right-column {
+      min-width: 300px;  /* Adjust min-width as needed */
+      flex: 1;            /* Let the right column take available space */
+    }
+  }

@@ -11,7 +11,7 @@ const LionelLogo: React.FC = ({
     <Avatar sx={{bgcolor: 'var(--app-blue)'}} style={{maxHeight: '32px', maxWidth: '32px'}}>
         L
     </Avatar>
-    <div style={{lineHeight: '150%'}}>
+    <div style={{lineHeight: '150%', font: 'var(--manrope-font)', marginLeft: '8px'}}>
       Lionel
     </div>
     

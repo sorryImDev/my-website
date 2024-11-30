@@ -3,6 +3,8 @@ import CustomButton from '../../components/customButton';
 import CallIcon from '@mui/icons-material/Call';
 import LionelLogo from '../../components/LionelLogo/LionelLogo';
 import Header from '../../components/landing-header';
+import LionelAvatar from '../../components/avatar';
+import AvatarLinkGroup from '../../components/avatar-links-group';
 
 
 const PlaygroundPage: React.FC = () => {
@@ -15,6 +17,8 @@ const PlaygroundPage: React.FC = () => {
             className=''
             />
             <LionelLogo/>
+            {/* <LionelAvatar/> */}
+            <AvatarLinkGroup/>
         </div>
     );
 };

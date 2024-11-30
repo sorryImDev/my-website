@@ -1,0 +1,15 @@
+.landing-page {
+    /* padding: 0 80px; */
+}
+
+.intro-sect {
+    width: 100%;
+    height: 641px;
+    box-sizing: border-box;  /* Ensures padding and borders are included in the width */
+    margin: 0;               /* Remove default margin if any */
+    padding: 112px 140px 80px;
+}
+
+.intro-content {
+    /* border: 1px solid red; */
+}
