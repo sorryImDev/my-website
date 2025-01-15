@@ -1,10 +1,8 @@
 import React from 'react';
-import CustomButton from '../../components/customButton';
 import CallIcon from '@mui/icons-material/Call';
 import LionelLogo from '../../components/LionelLogo/LionelLogo';
-import Header from '../../components/landing-header';
 import LionelAvatar from '../../components/avatar';
-import AvatarLinkGroup from '../../components/avatar-links-group';
+import { CustomButton, AvatarLinkGroup, Header } from '../../components';
 
 
 const PlaygroundPage: React.FC = () => {

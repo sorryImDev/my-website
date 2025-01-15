@@ -1,13 +1,11 @@
 import React from "react";
-import AvatarLinkGroup from "../avatar-links-group";
 import "./intro-section.css";
 import { ReactComponent as ScrollImg } from "../../assets/shapes/Group 12.svg";
 import { ReactComponent as WavyHand } from "../../assets/shapes/wavy-hand.svg";
-
 import { Chip } from "@mui/material";
 import CircleIcon from "@mui/icons-material/Circle";
-import CustomButton from "../customButton";
 import PeopleOutlineIcon from '@mui/icons-material/PeopleOutline';
+import { AvatarLinkGroup, CustomButton } from "../../components";
 
 interface introSectionProps {
   available: boolean;

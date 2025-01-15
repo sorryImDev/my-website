@@ -3,7 +3,7 @@ import Button from "@mui/material/Button";
 import { Avatar, Box } from "@mui/material";
 import Grid from "@mui/material/Grid2";
 import "./landing-header.css";
-import CustomButton from "../customButton";
+import { CustomButton, AvatarLinkGroup} from '../../components';
 import CallIcon from "@mui/icons-material/Call";
 import LionelLogo from "../LionelLogo/LionelLogo";
 
