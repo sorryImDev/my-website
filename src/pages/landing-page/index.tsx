@@ -1,17 +1,63 @@
-import React from "react";
-import './landing-page.css'
+import React, { useRef, useEffect, Suspense, useState } from "react";
+import "./landing-page.css";
 import Header from "../../components/landing-header";
-import IntroSection from "../../components/intro-section";
+import { AboutMeSection, IntroSection } from "../../views";
+import LocomotiveScroll from "locomotive-scroll";
+import "locomotive-scroll/dist/locomotive-scroll.css";
 
 const LandingPage: React.FC = () => {
+  const [showAboutMe, setShowAboutMe] = useState(false);
+  const introRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        // Trigger when intro section is halfway out of view
+        setShowAboutMe(!entry.isIntersecting);
+      },
+      {
+        root: null, // Use the viewport as the root
+        threshold: 0.8, // Trigger when 50% of the intro section is visible
+      }
+    );
+
+    if (introRef.current) {
+      observer.observe(introRef.current);
+    }
+
+    return () => {
+      if (introRef.current) {
+        observer.unobserve(introRef.current);
+      }
+    };
+  }, []);
+
   return (
     <div className="landing-page">
       <div className="header-sect section">
         <Header />
       </div>
-      <div className="intro-sect section">
+      <div
+        className="intro-sect section"
+        data-scroll
+        data-scroll-speed="0.5"
+        ref={introRef}
+      >
         <div className="intro-content">
-            <IntroSection available = {true}/>
+          <IntroSection available={true} />
+        </div>
+      </div>
+      <div
+        className={`about-me section ${showAboutMe ? "hidden" : "visible"}`}
+        data-scroll
+        data-scroll-speed="1"
+      >
+        <div className="about-me-content">
+          <AboutMeSection
+            customerSatisfaction={0}
+            yearsOfExp={0}
+            successProjects={0}
+          />
         </div>
       </div>
     </div>
