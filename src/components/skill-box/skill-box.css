@@ -1,0 +1,13 @@
+.skillbox {
+  padding: 40px 32px;
+  display: flex;
+  flex-direction: column;
+  font-size: 40px;
+  gap: 40px;
+  background-color: #001229;
+  stroke: #001b3d;
+  color: var(--app-white);
+}
+
+.title-row {
+}

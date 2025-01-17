@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, Suspense, useState } from "react";
 import "./landing-page.css";
 import Header from "../../components/landing-header";
-import { AboutMeSection, IntroSection } from "../../views";
+import { AboutMeSection, IntroSection, SkillsSection } from "../../views";
 import LocomotiveScroll from "locomotive-scroll";
 import "locomotive-scroll/dist/locomotive-scroll.css";
 
@@ -34,9 +34,11 @@ const LandingPage: React.FC = () => {
 
   return (
     <div className="landing-page">
+      {/* Header */}
       <div className="header-sect section">
         <Header />
       </div>
+      {/* Intro section */}
       <div
         className="intro-sect section"
         data-scroll
@@ -47,6 +49,7 @@ const LandingPage: React.FC = () => {
           <IntroSection available={true} />
         </div>
       </div>
+      {/* About Me section */}
       <div
         className={`about-me section ${showAboutMe ? "hidden" : "visible"}`}
         data-scroll
@@ -58,6 +61,12 @@ const LandingPage: React.FC = () => {
             yearsOfExp={0}
             successProjects={0}
           />
+        </div>
+      </div>
+      {/* Skills Section */}
+      <div className="skills-sect section" data-scroll data-scroll-speed="0.5">
+        <div className="skills-content">
+          <SkillsSection />
         </div>
       </div>
     </div>

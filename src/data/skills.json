@@ -1,0 +1,64 @@
+[
+    {
+        "title": "Frontend",
+        "language": [
+            {
+                "label": "TypeScript",
+                "icon": "Typescript"
+            },
+            {
+                "label": "React",
+                "icon": "React"
+            },
+            {
+                "label": "CSS",
+                "icon": "CSS"
+            }
+        ],
+        "framework": [
+            {
+                "label": "TypeScript",
+                "icon": "Typescript"
+            },
+            {
+                "label": "React",
+                "icon": "React"
+            },
+            {
+                "label": "CSS",
+                "icon": "CSS"
+            }
+        ]
+    },
+    {
+        "title": "Backend",
+        "language": [
+            {
+                "label": "Node.js",
+                "icon": "Node"
+            },
+            {
+                "label": "Express",
+                "icon": "Express"
+            },
+            {
+                "label": "MongoDB",
+                "icon": "MongoDB"
+            }
+        ],
+        "framework": [
+            {
+                "label": "Node.js",
+                "icon": "Node"
+            },
+            {
+                "label": "Express",
+                "icon": "Express"
+            },
+            {
+                "label": "MongoDB",
+                "icon": "MongoDB"
+            }
+        ]
+    }
+]

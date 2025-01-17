@@ -1,0 +1,33 @@
+.skills-section {
+  border: 2px solid green;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #000b19;
+  padding: 80px 140px 80px 140px;
+}
+
+.left-col {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: center;
+  align-items: start;
+  width: 100%;
+  .section-title {
+    font-size: 48px;
+    line-height: 120%;
+    letter-spacing: 1%;
+    color: var(--app-white);
+  }
+}
+
+.right-col {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+  width: 100%;
+}
