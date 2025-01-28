@@ -5,9 +5,37 @@ import CircleIcon from "@mui/icons-material/Circle";
 import { SkillBox } from "../../components";
 
 const SkillsSection: React.FC = () => {
+  const [isSticky, setIsSticky] = useState(false);
+  const skillsSectionRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsSticky(true);
+        } else {
+          setIsSticky(false);
+        }
+      },
+      {
+        threshold: 0,
+      }
+    );
+
+    if (skillsSectionRef.current) {
+      observer.observe(skillsSectionRef.current);
+    }
+
+    return () => {
+      if (skillsSectionRef.current) {
+        observer.unobserve(skillsSectionRef.current);
+      }
+    };
+  }, []);
+
   return (
-    <div className="skills-section">
-      <div className="left-col">
+    <div className="skills-section" ref={skillsSectionRef}>
+      <div className={`left-col ${isSticky ? "sticky" : ""}`}>
         <Chip
           label={"Competencies"}
           icon={<CircleIcon style={{ fill: "orange", fontSize: "8px" }} />}

@@ -34,20 +34,20 @@ const AboutMeSection: React.FC<aboutMeSectionProps> = ({
       <div className="bottom-row">
         <Card
           value={2}
-          unit={"Percent"}
-          title={"Customer Satisfaction"}
+          unit={"Years"}
+          title={"of Experience"}
           backgroundUrl={Ellipse}
         />
         <Card
           value={2}
-          unit={"Years"}
-          title={"of Experience"}
+          unit={"Projects"}
+          title={"successfully done"}
           backgroundUrl={Vector1}
         />
         <Card
           value={2}
-          unit={"Project"}
-          title={"Successfully Done"}
+          unit={"Professional certificatio"}
+          title={"Obtained"}
           backgroundUrl={Vector2}
         />
       </div>

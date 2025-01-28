@@ -1,58 +1,78 @@
 .avatar-group {
-    display: flex;
-    gap: 24px;
-    font-family: var(--manrope-font);
-    color: var(--app-grey-400);
-    flex-wrap: wrap;
+  display: flex;
+  gap: 24px;
+  font-family: var(--manrope-font);
+  color: var(--app-grey-400);
+  flex-wrap: wrap;
 }
 
-.left-column{
-    display: flex;
-    flex-direction: row;
+.left-column {
+  display: flex;
+  flex-direction: row;
 }
 
 .right-column {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
-
 .big-name {
-    font-size: 32px;
-    line-height: 140%;
+  font-size: 32px;
+  line-height: 140%;
 }
 
 .job-title {
-    font-size: 18px;
-    line-height: 150%;
-    margin-top: 4px;
+  font-size: 18px;
+  line-height: 150%;
+  margin-top: 4px;
 }
 
 .link-group {
-    display: flex;
-    gap: 16px;
-    flex-direction: row;
-    margin-top: 16px;
-    color: var(--app-blue);
+  display: flex;
+  gap: 16px;
+  flex-direction: row;
+  margin-top: 16px;
 }
 
 .link-item {
-    font-size: 20px;
+  font-size: 20px;
+  transition: transform 0.3s ease; /* Smooth transform */
+  color: var(--app-blue);
+}
+
+.link-item:hover {
+  transform: scale(1.1); /* Slight scaling on hover */
+  animation: pulse 1.5s infinite; /* Pulse effect */
 }
 
 /* Media Query for smaller screens */
 @media (max-width: 1566px) {
-    .avatar-group {
-      flex-wrap: nowrap; /* Prevent wrapping and keep everything in one row */
-    }
-  
-    .left-column {
-      /* If needed, adjust size or margins for left column */
-      width: auto;
-    }
-  
-    .right-column {
-      min-width: 300px;  /* Adjust min-width as needed */
-      flex: 1;            /* Let the right column take available space */
-    }
+  .avatar-group {
+    flex-wrap: nowrap; /* Prevent wrapping and keep everything in one row */
   }
+
+  .left-column {
+    /* If needed, adjust size or margins for left column */
+    width: auto;
+  }
+
+  .right-column {
+    min-width: 300px; /* Adjust min-width as needed */
+    flex: 1; /* Let the right column take available space */
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1.1);
+    border-width: 2px; /* Initial border width */
+  }
+  50% {
+    transform: scale(1.2); /* Increase scale to make it pulse outwards */
+    border-width: 5px; /* Increase border width for pulse effect */
+  }
+  100% {
+    transform: scale(1.1); /* Return to original size */
+    border-width: 2px; /* Return to initial border width */
+  }
+}
