@@ -1,48 +1,31 @@
 import { useState, useEffect } from "react";
-
-type Skill = {
-  label: string;
-  icon: string;
-};
-
-type SkillCategory = "language" | "framework" | "tools";
+import { Skill } from "../types/Skills";
+import skillsData from "../data/skills.json";
 
 type UseSkillBoxReturn = {
-  skills: Skill[];
-  isLoading: boolean;
-  error: string | null;
+  topSkills: Skill[];
+  btmSkills: Skill[];
 };
 
-const useSkillBox = (title: string, subtitle: any): UseSkillBoxReturn => {
-  const [skills, setSkills] = useState<Skill[]>([]);
-  const [isLoading, setIsLoading] = useState<boolean>(true);
-  const [error, setError] = useState<string | null>(null);
+const useSkillBox = (title: string): UseSkillBoxReturn => {
+  const [topSkills, setTopSkills] = useState<Skill[]>([]);
+  const [btmSkills, setBtmSkills] = useState<Skill[]>([]);
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const data = await import("../data/skills.json");
-        const matchedData = data.find(
-          (item: { title: string }) => item.title === title
-        );
-        if (matchedData && matchedData[subtitle]) {
-          setSkills(matchedData[subtitle]);
-        } else {
-          setError(
-            `No skills found for the title "${title}" and category "${subtitle}".`
-          );
-        }
-      } catch (err) {
-        setError("Failed to load skills data.");
-      } finally {
-        setIsLoading(false);
+    const fetchData = () => {
+      const matchedData = skillsData.find(
+        (item: { title: string }) => item.title === title
+      );
+      if (matchedData) {
+        setTopSkills(matchedData["top"]);
+        setBtmSkills(matchedData["bottom"]);
       }
     };
 
     fetchData();
   }, [title]);
 
-  return { skills, isLoading, error };
+  return { topSkills, btmSkills };
 };
 
 export default useSkillBox;

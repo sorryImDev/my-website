@@ -1,6 +1,7 @@
 import React from "react";
 import "./skill-box.css";
 import SkillBoxContent from "../skill-box-content";
+import useSkillBox from "../../hooks/useSkillBox";
 
 type SkillBoxComponentProps = {
   title: string;
@@ -13,12 +14,16 @@ const SkillBox: React.FC<SkillBoxComponentProps> = ({
   subTitleTop,
   subTitleBtm,
 }) => {
-  const [topRowContent, setTopRowContent] = useSkillBox();
+  const { topSkills, btmSkills } = useSkillBox(title);
+
   return (
     <div className="skillbox">
       <div className="title-row">{title}</div>
       <div className="content-row">
-        <SkillBoxContent subtitle={subTitleTop} />
+        <SkillBoxContent subtitle={subTitleTop} skills={topSkills} />
+      </div>
+      <div className="content-row">
+        <SkillBoxContent subtitle={subTitleBtm} skills={btmSkills} />
       </div>
     </div>
   );

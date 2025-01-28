@@ -1,63 +1,110 @@
 [
     {
         "title": "Frontend",
-        "language": [
+        "top": [
             {
                 "label": "TypeScript",
-                "icon": "Typescript"
-            },
-            {
-                "label": "React",
-                "icon": "React"
+                "icon": "TypeScript"
             },
             {
                 "label": "CSS",
                 "icon": "CSS"
+            },
+            {
+                "label": "Kotlin",
+                "icon": "Kotlin"
             }
         ],
-        "framework": [
-            {
-                "label": "TypeScript",
-                "icon": "Typescript"
-            },
+        "bottom": [
             {
                 "label": "React",
-                "icon": "React"
+                "icon": "ReactNative"
             },
             {
-                "label": "CSS",
-                "icon": "CSS"
+                "label": "Android Studio",
+                "icon": "AndroidStudio"
             }
         ]
     },
     {
         "title": "Backend",
-        "language": [
+        "top": [
             {
-                "label": "Node.js",
-                "icon": "Node"
+                "label": "Java",
+                "icon": "Java"
             },
             {
-                "label": "Express",
-                "icon": "Express"
+                "label": "Python",
+                "icon": "Python"
             },
             {
-                "label": "MongoDB",
-                "icon": "MongoDB"
+                "label": "Node.JS",
+                "icon": "NodeJS"
             }
         ],
-        "framework": [
+        "bottom": [
             {
-                "label": "Node.js",
-                "icon": "Node"
+                "label": "Spring Boot",
+                "icon": "SpringBoot"
             },
             {
-                "label": "Express",
-                "icon": "Express"
+                "label": "Express JS",
+                "icon": "ExpressJS"
             },
             {
-                "label": "MongoDB",
-                "icon": "MongoDB"
+                "label": "Nest JS",
+                "icon": "NestJs"
+            },
+            {
+                "label": "Django",
+                "icon": "Django"
+            },
+            {
+                "label": "liquibase",
+                "icon": "liquibase"
+            },
+            {
+                "label": "Redis",
+                "icon": "Redis"
+            },
+            {
+                "label": "Kafka",
+                "icon": "kafka"
+            },
+            {
+                "label": "MSSQL",
+                "icon": "MSSQL"
+            }
+        ]
+    },
+    {
+        "title": "DevSecOps and DevTools",
+        "top": [
+            {
+                "label": "Docker",
+                "icon": "Docker"
+            },
+            {
+                "label": "Kubernetes",
+                "icon": "K8"
+            },
+            {
+                "label": "Gitlab Pipelines",
+                "icon": "Gitlab"
+            },
+            {
+                "label": "Fortify",
+                "icon": "fortify"
+            },
+            {
+                "label": "Burp Suite",
+                "icon": "Burpsuite"
+            }
+        ],
+        "bottom": [
+            {
+                "label": "AWS",
+                "icon": "Aws"
             }
         ]
     }

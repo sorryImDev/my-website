@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
+  align-items: start;
   background-color: #000b19;
   padding: 80px 140px 80px 140px;
 }
@@ -25,9 +25,9 @@
 
 .right-col {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: start;
   align-items: center;
   width: 100%;
-  width: 100%;
+  gap: 40px;
 }

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./skills-section.css";
 import { Chip } from "@mui/material";
 import CircleIcon from "@mui/icons-material/Circle";
@@ -28,6 +28,16 @@ const SkillsSection: React.FC = () => {
         </div>
       </div>
       <div className="right-col">
+        <SkillBox
+          title={"Backend"}
+          subTitleTop={"Language"}
+          subTitleBtm={"Framework and Tools"}
+        />
+        <SkillBox
+          title={"DevSecOps and DevTools"}
+          subTitleTop={"Tools"}
+          subTitleBtm={"Platform"}
+        />
         <SkillBox
           title={"Frontend"}
           subTitleTop={"Language"}
