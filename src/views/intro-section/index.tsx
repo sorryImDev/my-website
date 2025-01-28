@@ -48,13 +48,6 @@ const IntroSection: React.FC<introSectionProps> = ({ available }) => {
           <br></br>
           Development Engineer
         </div>
-        {/* <div className="write-up">
-          I’m a Full Stack Developer passionate about creating scalable
-          applications. Skilled in <br />
-          front-end and back-end, I deliver innovative solutions blending
-          creativity <br />
-          and technology. Let’s collaborate to bring your vision to life!
-        </div> */}
         <div className="contact-me-btn-div">
           <CustomButton
             text={"Let's connect"}

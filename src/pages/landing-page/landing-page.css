@@ -1,12 +1,11 @@
 .landing-page {
-  /* padding: 0 80px; */
 }
 
 .intro-sect {
   width: 100%;
   height: 641px;
-  box-sizing: border-box; /* Ensures padding and borders are included in the width */
-  margin: 0; /* Remove default margin if any */
+  box-sizing: border-box;
+  margin: 0;
   padding: 112px 140px 80px;
 }
 .intro-sect.hidden {
@@ -26,16 +25,6 @@
   transform: translateY(20px);
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
-
-/* .about-me.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.about-me.hidden {
-  opacity: 1;
-  transform: translateY(50px);
-} */
 
 .skills-sect {
 }

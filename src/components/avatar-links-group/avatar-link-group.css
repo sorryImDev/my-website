@@ -36,43 +36,42 @@
 
 .link-item {
   font-size: 20px;
-  transition: transform 0.3s ease; /* Smooth transform */
+  transition: transform 0.3s ease;
   color: var(--app-blue);
 }
 
 .link-item:hover {
-  transform: scale(1.1); /* Slight scaling on hover */
-  animation: pulse 1.5s infinite; /* Pulse effect */
+  transform: scale(1.1);
+  animation: pulse 1.5s infinite;
 }
 
 /* Media Query for smaller screens */
 @media (max-width: 1566px) {
   .avatar-group {
-    flex-wrap: nowrap; /* Prevent wrapping and keep everything in one row */
+    flex-wrap: nowrap;
   }
 
   .left-column {
-    /* If needed, adjust size or margins for left column */
     width: auto;
   }
 
   .right-column {
-    min-width: 300px; /* Adjust min-width as needed */
-    flex: 1; /* Let the right column take available space */
+    min-width: 300px;
+    flex: 1;
   }
 }
 
 @keyframes pulse {
   0% {
     transform: scale(1.1);
-    border-width: 2px; /* Initial border width */
+    border-width: 2px;
   }
   50% {
-    transform: scale(1.2); /* Increase scale to make it pulse outwards */
-    border-width: 5px; /* Increase border width for pulse effect */
+    transform: scale(1.2);
+    border-width: 5px;
   }
   100% {
-    transform: scale(1.1); /* Return to original size */
-    border-width: 2px; /* Return to initial border width */
+    transform: scale(1.1);
+    border-width: 2px;
   }
 }

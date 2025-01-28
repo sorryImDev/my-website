@@ -1,5 +1,4 @@
 .skills-section {
-  /* border: 2px solid green; */
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -9,7 +8,7 @@
 }
 
 .left-col {
-  transition: all 0.3s ease; /* Smooth transition when sticky */
+  transition: all 0.3s ease;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -26,7 +25,7 @@
 
 .left-col.sticky {
   position: sticky;
-  top: 80px; /* When it reaches the top of the screen */
+  top: 80px;
   z-index: 10;
 }
 
