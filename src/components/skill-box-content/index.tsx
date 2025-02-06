@@ -26,8 +26,9 @@ import { Skill } from "../../types/Skills";
 import { Avatar } from "@mui/material";
 
 type SkillBoxContentComponentProps = {
-  subtitle: string;
+  subtitle?: string;
   skills: Skill[];
+  contact?: boolean;
 };
 
 const ICON_MAP: Record<string, React.FC<React.SVGProps<SVGSVGElement>>> = {
@@ -57,30 +58,40 @@ const ICON_MAP: Record<string, React.FC<React.SVGProps<SVGSVGElement>>> = {
 const SkillBoxContent: React.FC<SkillBoxContentComponentProps> = ({
   subtitle,
   skills,
+  contact = false,
 }) => {
   return (
     <div className="skillbox-content-row">
-      <div className="row-title">{subtitle}</div>
-      <div className="skillbox-content">
-        {skills.map((skill, index) => {
-          const IconComponent = ICON_MAP[skill.icon];
-          return (
-            <div className="content-set" key={index}>
-              {IconComponent ? (
-                <IconComponent />
-              ) : (
-                <Avatar
-                  sx={{ bgcolor: "var(--app-blue)" }}
-                  style={{ maxHeight: "32px", maxWidth: "32px" }}
-                >
-                  {skill.label.charAt(0)}
-                </Avatar>
-              )}
-              <text>{skill.label}</text>
+      {
+        subtitle && (      
+        <div className="row-title">{subtitle}</div>
+        )
+      }
+      {!contact ? (
+              <div className="skillbox-content">
+              {skills.map((skill, index) => {
+                const IconComponent = ICON_MAP[skill.icon];
+                return (
+                  <div className="content-set" key={index}>
+                    {IconComponent ? (
+                      <IconComponent />
+                    ) : (
+                      <Avatar
+                        sx={{ bgcolor: "var(--app-blue)" }}
+                        style={{ maxHeight: "32px", maxWidth: "32px" }}
+                      >
+                        {skill.label.charAt(0)}
+                      </Avatar>
+                    )}
+                    <text>{skill.label}</text>
+                  </div>
+                );
+              })}
             </div>
-          );
-        })}
-      </div>
+      ) : (
+        <div className="content-set">Chewchyoukeatlionel1712@gmail.com</div>
+      )}
+
     </div>
   );
 };

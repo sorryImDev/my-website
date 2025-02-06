@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, Suspense, useState } from "react";
 import "./landing-page.css";
 import Header from "../../components/landing-header";
-import { AboutMeSection, IntroSection, SkillsSection } from "../../views";
+import { AboutMeSection, IntroSection, SkillsSection, ContactSection } from "../../views";
 import LocomotiveScroll from "locomotive-scroll";
 import "locomotive-scroll/dist/locomotive-scroll.css";
 
@@ -67,6 +67,12 @@ const LandingPage: React.FC = () => {
       <div className="skills-sect section" data-scroll data-scroll-speed="0.5">
         <div className="skills-content">
           <SkillsSection />
+        </div>
+      </div>
+      {/* Contact Section */}
+      <div className="contact-sect section" data-scroll data-scroll-speed="0.5">
+        <div className="contact-content">
+          <ContactSection />
         </div>
       </div>
     </div>

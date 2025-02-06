@@ -50,7 +50,7 @@ const IntroSection: React.FC<introSectionProps> = ({ available }) => {
         </div>
         <div className="contact-me-btn-div">
           <CustomButton
-            text={"Let's connect"}
+            text={"Download My Resume"}
             icon={<PeopleOutlineIcon />}
             onClick={() => console.log("click")}
           />
