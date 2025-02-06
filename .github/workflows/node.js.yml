@@ -34,18 +34,17 @@ jobs:
     - name: Run tests
       if: ${{ steps.check_test.outputs.hasTestScript == 'true' }}
       run: npm test
-
+      
+    - name: Setup Pages
+      uses: actions/configure-pages@v5
+      
+    - name: Upload artifact
+      uses: actions/upload-pages-artifact@v3
+      with:
+          # Upload entire repository
+          path: '.'
     - name: Deploy to GitHub Pages
-      if: github.ref == 'refs/heads/main'  # Only deploy on main branch
-      run: |
-        npm install --save-dev gh-pages
-        npm run deploy
+      id: deployment
+      uses: actions/deploy-pages@v4
 
-    - name: Check if "test" script exists
-      id: check_test
-      run: |
-        if grep -q '"test":' package.json; then
-          echo "hasTestScript=true" >> $GITHUB_ENV
-        else
-          echo "hasTestScript=false" >> $GITHUB_ENV
-        fi
+
