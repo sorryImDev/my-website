@@ -4,6 +4,8 @@ import Header from "../../components/landing-header";
 import { AboutMeSection, IntroSection, SkillsSection, ContactSection } from "../../views";
 import LocomotiveScroll from "locomotive-scroll";
 import "locomotive-scroll/dist/locomotive-scroll.css";
+import { AvatarLinkGroup } from "../../components";
+import { GitHub, LinkedIn } from "@mui/icons-material";
 
 const LandingPage: React.FC = () => {
   const [showAboutMe, setShowAboutMe] = useState(false);
@@ -73,6 +75,14 @@ const LandingPage: React.FC = () => {
       <div className="contact-sect section" data-scroll data-scroll-speed="0.5">
         <div className="contact-content">
           <ContactSection />
+        </div>
+        <div className="link-group-footer">
+          <a href="https://github.com/sorryImDev" className="link-item-footer">
+            <GitHub className="link-item-footer" />
+          </a>
+          <a href="https://www.linkedin.com/in/ccklionel/">
+            <LinkedIn className="link-item-footer" />
+          </a>
         </div>
       </div>
     </div>
