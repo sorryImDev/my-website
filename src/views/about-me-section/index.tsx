@@ -46,7 +46,7 @@ const AboutMeSection: React.FC<aboutMeSectionProps> = ({
         />
         <Card
           value={2}
-          unit={"Professional certificatio"}
+          unit={"Professional certification"}
           title={"Obtained"}
           backgroundUrl={Vector2}
         />
